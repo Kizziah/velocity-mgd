@@ -1,25 +1,51 @@
-<h1>Listing blogs</h1>
+<h1>JavaScript</h1>
+<h1>MGD</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-md-6">
+  <pre class="language-javascript">
+    // Define our Function
+    function checkMeaningOfLife ( decimal, success ) {
+        if ( parseInt(decimal,10) === 42 ) {
+            window.console.log(success);
+        }
+    };
+    // Define our Variables
+    var str = 'The meaning of life is true',
+        decimal = 42.00;
+    // Fire our Function
+    checkMeaningOfLife(decimal,success);
+  </pre>
+  </div>
+</div>
+<pre class="language-javascript">
+describe('Directive: setCondition', function() {
+  var element,
+      $scope,
+      $compile;
 
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  function createElement(condition){
+    $scope.condition = condition;
+    $compile(element)($scope);
+    $scope.$digest();
+    return element;
+  }
 
-<br>
+  beforeEach(module('setCondition'));  
+  beforeEach(inject(function($rootScope, $injector) {
+    $scope   = $rootScope.$new({});
+    $compile = $injector.get('$compile');
+    $scope.condition = {};
+    element = angular.element("<div class='set-condition'>");
+  }));
 
-<%= link_to 'New Blog', new_blog_path %>
+  it('sets condition to true', function() {
+    element = CreateElement(true);
+    expect(element.condition).toEqual(true);
+  });
+
+});
+  
+
+
+</pre>
