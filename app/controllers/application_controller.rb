@@ -1,8 +1,3 @@
-require 'coderay'
-
-style = CodeRay::Encoders[:html]::CSS.new(:default).stylesheet
-puts style
-
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
