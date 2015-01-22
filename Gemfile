@@ -7,6 +7,7 @@ gem 'pg'
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.3'
+gem 'angularjs-rails'
 
 gem 'haml', '~> 4.0.5'
 # Use Uglifier as compressor for JavaScript assets

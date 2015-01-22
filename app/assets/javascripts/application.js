@@ -16,5 +16,8 @@
 //= require bootstrap-sprockets
 //= require jquery14min
 //= require syntaxcodemin
+//= require velocity
 
+//= require app
 //= require blogs
+
