@@ -6,7 +6,9 @@ class BlogsController < ApplicationController
   def index    
     @blogs = Blog.all    
   end
-
+  
+  def home   
+  end
   # GET /blogs/1
   # GET /blogs/1.json
   def show

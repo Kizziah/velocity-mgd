@@ -17,6 +17,7 @@
 //= require jquery14min
 //= require syntaxcodemin
 //= require velocity
+//= require angular
 
 //= require app
 //= require blogs

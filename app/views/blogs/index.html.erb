@@ -1,80 +1,64 @@
-<h1>JavaScript</h1>
-<div class="swing">
-  <div class="btn btn-success">Swing</div>
-</div>
-
-<div class="row">
-  <div class="col-md-offset-2 col-md-6">
-    <h4>Closure example with Jasmine</h4>
-    <h4>When </h4>
-    <p></p>
-  </div>
-</div>
-<div class="swooping ruby">
-    <img src="http://www.blackberrycool.com/wp-content/uploads/2009/10/ruby-300x300.png">
-</div>
-<div class="row">
-  <div class="col-md-offset-2 col-md-6">
-    <pre class="language-javascript">
-      describe('Directive: setCondition', function() {
-        var element,
-            $scope,
-            $compile;
-
-        function createElement(condition){
-          $scope.condition = condition;
-          $compile(element)($scope);
-          $scope.$digest();
-          return element;
-        }
-
-        beforeEach(module('setCondition'));  
-        beforeEach(inject(function($rootScope, $injector) {
-          $scope   = $rootScope.$new({});
-          $compile = $injector.get('$compile');
-          $scope.condition = {};
-          element = angular.element('div class="set-condition"');
-        }));
-
-        it('sets condition to true', function() {
-          element = CreateElement(true);
-          expect(element.condition).toEqual(true);
-        });
-      });      
-    </pre>
+<div class="blog">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <h4>Closure Angular Directive with Jasmine</h4>
+      <p>setConditionSpec.js</p>
+    </div>
   </div>
 
-</div>
-<div class="row">
-  <div class="col-md-offset-2 col-md-6">
-    <pre class="language-javascript">
-      describe('Directive: setCondition', function() {
-        var element,
-            $scope,
-            $compile;
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <pre class="language-javascript">
+        describe('Directive: setCondition', function() {
+          var element,
+              $scope,
+              $compile;
 
-        function createElement(condition){
-          $scope.condition = condition;
-          $compile(element)($scope);
-          $scope.$digest();
-          return element;
-        }
+          function createElement(condition){
+            $scope.condition = condition;
+            $compile(element)($scope);
+            $scope.$digest();
+            return element;
+          }
 
-        beforeEach(module('setCondition'));  
-        beforeEach(inject(function($rootScope, $injector) {
-          $scope   = $rootScope.$new({});
-          $compile = $injector.get('$compile');
-          $scope.condition = {};
-          element = angular.element('div class="set-condition"');
-        }));
+          beforeEach(module('setCondition'));  
+          beforeEach(inject(function($rootScope, $injector) {
+            $scope   = $rootScope.$new({});
+            $compile = $injector.get('$compile');
+            $scope.condition = {};
+            element = angular.element("div set-condition /div");
+          }));
 
-        it('sets condition to true', function() {
-          element = CreateElement(true);
-          expect(element.condition).toEqual(true);
-        });
+          it('sets condition to true', function() {
+            element = CreateElement(true);
+            expect(element.condition).toEqual(true);
+          });
+        });      
+      </pre>
+    </div>
 
-      });      
-    </pre>
   </div>
+  <br>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+    <p>setCondition.js</p>
+      <pre class="language-javascript">
+        app.directive('setCondition', ['$compile',
+            function($compile) {
+              return {
+                restrict: 'A',
+                link: function(scope, element, attrs) {
+            
+                  scope.setCondition = function(param) {            
+                    element.condition = param
+                  };
 
+                },
+
+             };
+        }]);    
+      </pre>
+    </div>
+
+  </div>
 </div>

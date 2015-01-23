@@ -1,22 +1,126 @@
-angular.module('myApp', []);
+myApp = angular.module('myApp', []);
 
-function Ctrl($scope) {
+myApp.directive('swing', ['$compile',
+    function($compile) {
+      return {
+        restrict: 'A',
+        scope: {},
+        link: function(scope, elm, attrs) {
+          scope.remove = function() {            
+            elm.remove();
+          };         
 
-  $scope.admin = false;
-  $scope.step = 1;
-  $scope.user = {};
+          scope.swing = function() {            
+            $("div.swing").velocity("callout.swing");
 
-  $scope.setStep = function(step){
-    $scope.step = step;
-  }
+          };
 
-  $scope.verify = function(){
-    $scope.step = 4;
-    $scope.admin = true;
-  }
+          elm.removeAttr("swing"); // Prevents loop
+          elm.attr('ng-click', "swing()");
+          $compile(elm)(scope);
+        },
 
-  $scope.screenColor = function(color){
-    document.body.style.background = color;
-  }
+     };
+}]);
 
-}
+myApp.directive('swooping', ['$compile',
+    function($compile) {
+      return {
+        restrict: 'A',
+        scope: {},
+        link: function(scope, elm, attrs) {
+          scope.remove = function() {            
+            elm.remove();
+          };         
+
+          scope.swooping = function() {            
+            $("div.swooping").velocity("transition.swoopOut");
+          };
+
+          elm.removeAttr("swooping"); // Prevents loop
+          elm.attr('ng-click', "swooping()");
+          $compile(elm)(scope);
+        },
+
+     };
+}]);
+
+myApp.directive('bounce', ['$compile',
+    function($compile) {
+      return {
+        restrict: 'A',
+        scope: {},
+        link: function(scope, elm, attrs) {
+    
+          scope.bounce = function() {            
+            $("div.bounce").velocity("callout.bounce");
+          };
+
+          elm.removeAttr("bounce"); // Prevents loop
+          elm.attr('ng-click', "bounce()");
+          $compile(elm)(scope);
+        },
+
+     };
+}]);
+
+myApp.directive('boomerang', ['$compile',
+    function($compile) {
+      return {
+        restrict: 'A',
+        scope: {},
+        link: function(scope, elm, attrs) {
+       
+          scope.boomerang = function() {         
+          console.log("aadf");
+            $('div.box').velocity({
+              rotateY: '360deg'
+            },{
+              duration:1000,
+              easing:'linear'
+            });
+          };
+
+          elm.removeAttr("boomerang"); // Prevents loop
+          elm.attr('ng-click', "boomerang()");
+          $compile(elm)(scope);
+        },
+
+     };
+}]);
+
+
+
+myApp.directive('myDraggable', ['$document', function($document) {
+  return function(scope, element, attr) {
+    var startX = 0, startY = 0, x = 0, y = 0;
+
+    element.css({
+     position: 'relative',
+     cursor: 'pointer'
+    });
+
+    element.on('mousedown', function(event) {
+      // Prevent default dragging of selected content
+      event.preventDefault();
+      startX = event.pageX - x;
+      startY = event.pageY - y;
+      $document.on('mousemove', mousemove);
+      $document.on('mouseup', mouseup);
+    });
+
+    function mousemove(event) {
+      y = event.pageY - startY;
+      x = event.pageX - startX;
+      element.css({
+        top: y + 'px',
+        left:  x + 'px'
+      });
+    }
+
+    function mouseup() {
+      $document.off('mousemove', mousemove);
+      $document.off('mouseup', mouseup);
+    }
+  };
+}]);
