@@ -14,11 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require jquery14min
-//= require syntaxcodemin
-//= require velocity
-//= require angular
+// = require angular
+// = require velocity
 
 //= require app
-//= require blogs
-
