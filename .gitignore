@@ -16,10 +16,7 @@
 /tmp
 
 
-# Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
-stdout
+/public
 
 
 .DS_Store
