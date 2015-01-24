@@ -1,3 +1,4 @@
+'use strict';
 
 /**
  * @ngdoc overview
@@ -101,27 +102,65 @@ angular.module('myApp').directive('bounce', ['$compile',
      };
 }]);
 
-// myApp.directive('boomerang', ['$compile',
-//     function($compile) {
-//       return {
-//         restrict: 'A',
-//         scope: {},
-//         link: function(scope, elm, attrs) {
+angular.module('myApp').directive('boomerang', ['$compile',
+    function($compile) {
+      return {
+        restrict: 'A',
+        scope: {},
+        link: function(scope, elm, attrs) {
        
-//           scope.boomerang = function() {         
-//             $('div.box').velocity({
-//               rotateY: '360deg'
-//             },{
-//               duration:1000,
-//               easing:'linear'
-//             });
-//           };
+          scope.boomerang = function() {         
+            $('div.box').velocity({
+              rotateY: '360deg'
+            },{
+              duration:1500,
+              easing:'linear'
+            });
+          };
 
-//           elm.removeAttr("boomerang"); // Prevents loop
-//           elm.attr('ng-click', "boomerang()");
-//           $compile(elm)(scope);
-//         },
+          elm.removeAttr("boomerang"); // Prevents loop
+          elm.attr('ng-click', "boomerang()");
+          $compile(elm)(scope);
+        },
 
-//      };
-// }]);
+     };
+}]);
+
+angular.module('myApp').directive('moveRight', ['$compile',
+    function($compile) {
+      return {
+        restrict: 'A',
+        scope: {},
+        link: function(scope, elm, attrs) {
+            var cloneElement = elm;
+            scope.resetDiv = function () {
+            };
+
+
+            scope.boomerang = function() {         
+              $('div.box').velocity({
+                rotateY: '360deg'
+              },{
+                duration:1500,
+                easing:'linear'
+              });
+            };
+
+            scope.moveRight = function() {
+              $('#move-right').velocity({
+                  opacity: 0.85,
+                  left: "+=200px",
+                  height: "+=60px"
+                }, 2000, function() {
+                    scope.boomerang()
+                });
+            };
+
+            elm.removeAttr("move-right"); // Prevents loop
+            elm.attr('ng-click', "moveRight()");
+            $compile(elm)(scope);        
+        },
+
+     };
+}]);
 
