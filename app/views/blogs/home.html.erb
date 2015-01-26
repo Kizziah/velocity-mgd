@@ -1,9 +1,5 @@
 <div ng-controller="actionCtrl"  class="home">
 
-	<select ng-model="vlsoptionsSelected"
-	    ng-options="opt as opt.label for opt in vlsoptions">
-	</select>
-	
 	<div class="btn btn-success"  ng-click="animateCalloutDiv('swing')">
 		Swing
 	</div>	
@@ -22,7 +18,7 @@
 	<div class="row">
 	  <div my-draggable>
 			<div class="col-md-offset-2 col-md-3">
-				<div class="row about ">
+				<div class="row about">
 					<h3>About Me</h3>
 					<p>I'm an experiecned web developer with HTML5, Ruby on Rails, and JavaScript. Focus on user-centered UX/UI for websites and mobile applications. I also have experience with educational software. I have a strong focus for BDD developement</p>
 				</div>
@@ -30,9 +26,11 @@
 	  </div>
 		<div my-draggable>
 	 		<div class="col-md-3">
-				<div class="row about ">
+				<div class="row about">
 					<h3>Blog</h3>
 					<a>Jasmine describes Closure</a>
+					<i class="fa fa-cog fa-spin"></i>
+					<i class="fa fa-refresh fa-spin"></i>
 				</div>
 			</div>
 		</div>
