@@ -9,7 +9,17 @@ angular.module("myApp").controller("actionCtrl", [
 			},{
 			  duration: 2500,
 			  easing:'linear'
-			});
+			});			
+
+			// $('img#pdr1').velocity({
+			//   rotateX: '360deg',
+			//   rotateY: '360deg'
+			// },{
+			//   duration: 2500,
+			//   easing:'linear'
+			// });
+
+			
 		});
 
 	  $scope.boomerang = function() {         
