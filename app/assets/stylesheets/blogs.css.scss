@@ -2,16 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	background: #efefef;
+	// background: #efefef;
+}
+section.intro {
+	margin-bottom: 430px;
 }
 
-div.ruby  {
-	position: absolute;
-}
-div.swooping {
-	position: absolute;
+section.water-bottom {
+	background: blue;
+	height: 500px;
 }
 
+section#projects {
+	background: black;
+	height: 100%;
+  	color: #eee !important;
+}
+
+div.item {
+	img{
+		width: 80;
+	}
+}
 // div.code {
 // 	background-color: #293D42;
 // 	text-shadow: #002b36 0 1px;

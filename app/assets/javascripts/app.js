@@ -116,6 +116,8 @@ angular.module('myApp').directive('boomerang', ['$compile',
               duration:1500,
               easing:'linear'
             });
+            $("div.box").velocity("transition.flipBounceYOut");
+
           };
 
           elm.removeAttr("boomerang"); // Prevents loop
@@ -152,7 +154,7 @@ angular.module('myApp').directive('moveRight', ['$compile',
                   left: "+=200px",
                   height: "+=60px"
                 }, 2000, function() {
-                    scope.boomerang()
+                  scope.boomerang()
                 });
             };
 
@@ -164,3 +166,16 @@ angular.module('myApp').directive('moveRight', ['$compile',
      };
 }]);
 
+
+// angular.module('myApp').controller('actionCtrl', [
+//     '$q',
+//     '$scope',
+//     function (
+//         $q,
+//         $scope
+//     ) {
+//       $scope.swings = function() {
+//         $("div.swing").velocity("callout.swing")
+//       };
+//     }
+// ]);

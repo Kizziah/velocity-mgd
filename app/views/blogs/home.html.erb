@@ -1,27 +1,53 @@
-<div class="home">
-	<a class="pull-right" href="https://github.com/Kizziah">
+<div ng-controller="actionCtrl"  class="home">
+
+	<select ng-model="vlsoptionsSelected"
+	    ng-options="opt as opt.label for opt in vlsoptions">
+	</select>
+	
+	<div class="btn btn-success"  ng-click="animateCalloutDiv('swing')">
+		Swing
+	</div>	
+
+	<div class="btn btn-success"  ng-click="animateCalloutDiv('bounce')">
+		Bounce
+	</div>	
+
+	<div class="btn btn-success"  ng-click="animateCalloutDiv('pulse')">
+		Pulse
+	</div>	
+	<a class="pull-right git"   href="https://github.com/Kizziah">
 		<img href="" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_color-128.png">
 	</a>
-	<div class="row">
-		<div my-draggable swing class="btn btn-primary">Swing</div>	
-		<div my-draggable bounce class="btn btn-success">Bounce</div>		
-		<div my-draggable boomerang class="btn btn-success">Move</div>
-		<div my-draggable move-right class="btn btn-success">moveRight</div>
-	</div>
 
 	<div class="row">
 	  <div my-draggable>
-		<div class="col-md-offset-2 col-md-6">
-			<div class="row swing bounce">
-				<h3>About Me</h3>
-				<p>I'm a web devolper </p>
+			<div class="col-md-offset-2 col-md-3">
+				<div class="row about ">
+					<h3>About Me</h3>
+					<p>I'm a web devolper </p>
+				</div>
+			</div>
+	  </div>
+		<div my-draggable>
+	 		<div class="col-md-3">
+				<div class="row about ">
+					<h3>Blog</h3>
+					<a href="Jasmine describes Closure">Jasmine describes Closure</a>
+				</div>
 			</div>
 		</div>
 
-	  </div>
+
 	</div>
-	 <div class="box">
-		 <div class="boomerang btn btn-success">Hello</div>
+	<div class="btn btn-success"  ng-click="boomerang()">
+		Move
 	</div>
-	<div id="move-right"><h1>Hello</h1></div>
+	<div class="col-md-{{distanceSelected}}">
+		<div class="col-md-2 box-holder">
+			me
+			 <div class="box" my-draggable>
+				 <div class="btn btn-success">Hello</div>
+			</div>
+		</div>
+	</div>
 </div>

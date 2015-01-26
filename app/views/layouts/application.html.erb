@@ -8,9 +8,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="myApp">
-	<div class="container-fluid">
-		<%= yield %>
-	</div>
-
+	<section class="intro">
+		<div>
+			<%= yield %>
+		</div>		
+	</section>
+	<section id="projects" class="container-fluid">
+		<h2>A few clients, projects and toys</h2>
+		<div class="col-sm-6 col-md-4 item">	
+			<p>PDR redesign helps schools</p>
+			<img width="255px" src="assets/pdr1.png">
+		</div>
+	</section>
+	<section class="water-bottom">
+		<div>
+			OCean
+		</div>
+	</section>
 </body>
 </html>

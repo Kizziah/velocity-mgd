@@ -3,14 +3,3 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 # swing = ->
 # 	$("div.swing").velocity("callout.swing")
-
-$ ->
-	$('.box').velocity({
-	  rotateY: '360deg'
-	},{
-	  duration:4000,
-	  easing:'linear'
-	});
-
-$(".blog").ready ->	
-	$.SyntaxHighlighter.init();

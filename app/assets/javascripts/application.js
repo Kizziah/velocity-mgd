@@ -18,3 +18,5 @@
 // = require velocity
 
 //= require app
+//= require action
+//= require mgdApp
