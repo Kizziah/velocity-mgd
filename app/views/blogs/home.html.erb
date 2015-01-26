@@ -1,44 +1,109 @@
-<div ng-controller="actionCtrl"  class="home">
+<section class="intro container">
+	<div ng-controller="actionCtrl"  class="home">
 
-	<a class="pull-right git"   href="https://github.com/Kizziah">
-		<img href="" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_color-128.png">
-	</a>
+		<a class="pull-right git"   href="https://github.com/Kizziah">
+			<img href="" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_color-128.png">
+		</a>
 
-	<div class="row">
-		<div class="col-md-offset-1 col-md-3">
-			<div class="row about">
-				<h3>About Me</h3>
-				<p>I'm an experiecned web developer with HTML5, Ruby on Rails, and JavaScript. Focus on user-centered UX/UI for websites and mobile applications. I also have experience with educational software. I have a strong focus for BDD developement</p>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-3">
+				<div class="row about">
+					<h3>About Me</h3>
+					<p>I'm an experiecned web developer with HTML5, Ruby on Rails, and JavaScript. Focus on user-centered UX/UI for websites and mobile applications. I also have experience with educational software. I have a strong focus for BDD developement</p>
+				</div>
 			</div>
+		 		<div class="col-md-3">
+					<div class="row about">
+						<h3>Blog</h3>
+						<a>Jasmine describes Closure</a>
+						<i class="fa fa-cog fa-spin"></i>
+						<i class="fa fa-refresh fa-spin"></i>
+					</div>
+				</div>	 		
+				<div class="col-md-3">
+					<div class="row about">
+						<h3 ng-click="gotoProjects()">Projects</h3>				
+						<a>Educational Software</a>
+						<i class="fa fa-refresh fa-spin"></i>
+						<br>
+						<a>Social Media Apps</a>
+						<i class="fa fa-cog fa-spin"></i>
+					</div>
+				</div>
 		</div>
-	 		<div class="col-md-3">
-				<div class="row about">
-					<h3>Blog</h3>
-					<a>Jasmine describes Closure</a>
-					<i class="fa fa-cog fa-spin"></i>
-					<i class="fa fa-refresh fa-spin"></i>
+		<div class="row text-center action-row">
+			<div class="btn btn-success"  ng-click="animateCalloutDiv('swing')">
+					Swing
+				</div>	
+
+				<div class="btn btn-primary"  ng-click="animateCalloutDiv('bounce')">
+					Bounce
+				</div>	
+
+				<div class="btn btn-danger"  ng-click="animateCalloutDiv('pulse')">
+					Pulse
 				</div>
-			</div>	 		
-			<div class="col-md-3">
-				<div class="row about">
-					<h3 ng-click="gotoProjects()">Projects</h3>				
-					<a>Jasmine describes Closure</a>
-					<i class="fa fa-cog fa-spin"></i>
-					<i class="fa fa-refresh fa-spin"></i>
-				</div>
-			</div>
+		</div>
+		<div class="row text-center hero">
+			<h3>About Me</h3>
+			<p>I'm an experiecned web developer with HTML5, Ruby on Rails, and JavaScript. Focus on user-centered UX/UI for websites and mobile applications. I also have experience with educational software. I have a strong focus for BDD developement. I unit test AngularJS with Jasmine, and can also test API endpoints using Jasmine.</p>
+		</div>
 	</div>
-	<div class="row text-center">
-		<div class="btn btn-success"  ng-click="animateCalloutDiv('swing')">
-				Swing
-			</div>	
-
-			<div class="btn btn-primary"  ng-click="animateCalloutDiv('bounce')">
-				Bounce
-			</div>	
-
-			<div class="btn btn-danger"  ng-click="animateCalloutDiv('pulse')">
-				Pulse
-			</div>
+</section>
+<div id="projects" class="container-fluid">
+	<div class="row">
+	</div>
+	<div class="row">
+		<h2 class="text-center">Recent Projects, Software, and Collaborations</h2>
+	</div>		
+	<div class="col-md-offset-2 col-md-8">
+		<div class="thumbnail">
+			<img id="pdr1" width="600px" src="assets/pdr2.png">
+			<div class="caption text-center">
+				<h3>PDredesign</h3>
+				<p>Professional development that engages in a candid, cross-functional discussion about innovative Professional Development tools. Develops high level understanding of the organization's current strengths and weaknesses and overall readiness, aid in the PD strategy design, and support the associated whole system change. Readiness Assessment consists of:
+				Gathering a cross-functional team
+				Having each team member review and fill out the assessment
+				Discussing the questions one by one as a group, coming to a consensus on a score for each question, and providing evidence and bright spots to support the consensus score
+				Creating the report: After filing out the scoring rubric, a printable version of the assessment report will be generated</p>
+				<p class="techs">
+				  <span class="label label-default">Ruby</span>
+				  <span class="label label-default">Ruby on Rails</span>
+				  <span class="label label-default">Bootsrap</span>
+				  <span class="label label-default">Jasmine</span>
+				  <span class="label label-default">JavaScript</span>
+				  <span class="label label-default">AngularJS</span>
+				  <span class="label label-default">jQuery</span>
+				  <span class="label label-default">HTML 5</span>
+				  <span class="label label-default">CSS 3</span>
+				  <span class="label label-default">Heroku</span>
+				</p>
+				<p>
+          <a href="http://pdredesign.org/" class="btn btn-default" target="_blank"><i class="fa fa-external-link-square"></i> Website</a>
+          <a href="//www.youtube.com/embed/v-ueg3RL1VI?rel=0" class="btn btn-default" target="_blank"><i class="fa fa-vimeo-square"></i> Video</a>
+        </p>
+			</div>			
+		</div>
+	</div>
+	<div class="col-md-offset-2 col-md-8">
+		<div class="thumbnail">
+			<img id="pdr1" width="600px" src="assets/zoomph1.png">
+			<div class="caption text-center">
+				<h3>Zoomph</h3>
+				<p></p>
+				<p class="techs">
+				  <span class="label label-default">Bootsrap</span>
+				  <span class="label label-default">JavaScript</span>
+				  <span class="label label-default">AngularJS</span>
+				  <span class="label label-default">jQuery</span>
+				  <span class="label label-default">HTML 5</span>
+				  <span class="label label-default">CSS 3</span>
+				  <span class="label label-default">AJAX</span>
+				</p>
+				<p>
+          <a href="https://zoomph.com/" class="btn btn-default" target="_blank"><i class="fa fa-external-link-square"></i> Website</a>
+        </p>
+			</div>			
+		</div>
 	</div>
 </div>

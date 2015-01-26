@@ -8,67 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="myApp">
-	<section class="intro container">
-		<%= yield %>
-	</section>
 
-	<div id="projects" class="container-fluid">
-		<div class="row">
-		</div>
-		<div class="row">
-			<h2 class="text-center">Recent Projects, Software, and Collaborations</h2>
-		</div>		
-		<div class="col-md-offset-2 col-md-8">
-			<div class="thumbnail">
-				<img id="pdr1" width="600px" src="assets/pdr2.png">
-				<div class="caption text-center">
-					<h3>PDredesign</h3>
-					<p>Professional development that engages in a candid, cross-functional discussion about innovative Professional Development tools. Develops high level understanding of the organization's current strengths and weaknesses and overall readiness, aid in the PD strategy design, and support the associated whole system change. Readiness Assessment consists of:
-					Gathering a cross-functional team
-					Having each team member review and fill out the assessment
-					Discussing the questions one by one as a group, coming to a consensus on a score for each question, and providing evidence and bright spots to support the consensus score
-					Creating the report: After filing out the scoring rubric, a printable version of the assessment report will be generated</p>
-					<p class="techs">
-					  <span class="label label-default">Ruby</span>
-					  <span class="label label-default">Ruby on Rails</span>
-					  <span class="label label-default">Bootsrap</span>
-					  <span class="label label-default">Jasmine</span>
-					  <span class="label label-default">JavaScript</span>
-					  <span class="label label-default">AngularJS</span>
-					  <span class="label label-default">jQuery</span>
-					  <span class="label label-default">HTML 5</span>
-					  <span class="label label-default">CSS 3</span>
-					  <span class="label label-default">Heroku</span>
-					</p>
-					<p>
-            <a href="http://pdredesign.org/" class="btn btn-default" target="_blank"><i class="fa fa-external-link-square"></i> Website</a>
-            <a href="//www.youtube.com/embed/v-ueg3RL1VI?rel=0" class="btn btn-default" target="_blank"><i class="fa fa-vimeo-square"></i> Video</a>
-          </p>
-				</div>			
-			</div>
-		</div>
-		<div class="col-md-offset-2 col-md-8">
-			<div class="thumbnail">
-				<img id="pdr1" width="600px" src="assets/zoomph1.png">
-				<div class="caption text-center">
-					<h3>Zoomph</h3>
-					<p></p>
-					<p class="techs">
-					  <span class="label label-default">Bootsrap</span>
-					  <span class="label label-default">JavaScript</span>
-					  <span class="label label-default">AngularJS</span>
-					  <span class="label label-default">jQuery</span>
-					  <span class="label label-default">HTML 5</span>
-					  <span class="label label-default">CSS 3</span>
-					  <span class="label label-default">AJAX</span>
-					</p>
-					<p>
-            <a href="https://zoomph.com/" class="btn btn-default" target="_blank"><i class="fa fa-external-link-square"></i> Website</a>
-          </p>
-				</div>			
-			</div>
-		</div>
-	</div>
+		<%= yield %>
 <!--   <iframe width="100%" src="//www.youtube.com/embed/v-ueg3RL1VI?rel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe> -->
 	<section id="contact" class="container content-section text-center">
       <div class="row">

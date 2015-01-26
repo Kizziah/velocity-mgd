@@ -21,6 +21,10 @@ div#projects {
 		color: #28c3ab;
 		background-color: transparent;
 	}
+
+	h2 {
+		margin-top: 50px
+	}
 }
 
 div.thumbnail {
@@ -52,6 +56,11 @@ span.label-default {
 	margin-bottom: 10px;
 	font-size: 18px;
 	color: #28c3ab !important;
+}
+
+.hero {
+	font-size: 18px;
+	padding: 20px;
 }
 
 // div.code {
