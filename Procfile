@@ -1,1 +1,0 @@
-web: bundle exec unicorn -p 9000 -E development
