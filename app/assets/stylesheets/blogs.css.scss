@@ -15,7 +15,6 @@ div#projects {
 	height: 100%;
 	width: 102%;
   color: #eee !important;
-  padding-bottom: 300px;
  
   .btn-default {
 		border: 1px solid #28c3ab;
@@ -62,4 +61,21 @@ span.label-default {
 }
 .action-row {
 	margin-top: 60px;
+}
+
+section#contact {
+	padding: 230px;
+	width: 100%;
+	background-color: black;
+	// padding-bottom: 100px;
+	a {
+		color: #28c3ab;
+	}
+	h2 {
+		color: white;
+	}
+	p {
+		color: #28c3ab;
+		font-size: 20px;
+	}
 }
