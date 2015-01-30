@@ -132,16 +132,29 @@ angular.module('myApp').directive('moveRight', ['$compile',
      };
 }]);
 
+//jQuery to collapse the navbar on scroll
+// $(window).scroll(function() {
+//   if ($(".navbar").offset().top > 50) {
+//     $(".navbar-fixed-top").addClass("top-nav-collapse");
+//   } else {
+//     $(".navbar-fixed-top").removeClass("top-nav-collapse");
+//   }
+// });
 
-// angular.module('myApp').controller('actionCtrl', [
-//     '$q',
-//     '$scope',
-//     function (
-//         $q,
-//         $scope
-//     ) {
-//       $scope.swings = function() {
-//         $("div.swing").velocity("callout.swing")
-//       };
-//     }
-// ]);
+//jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+  $('.page-scroll a').bind('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top
+    }, 750, 'easeInOutExpo');
+    event.preventDefault();
+  });
+
+  // var $container = $('#container');
+  // initialize Masonry after all images have loaded  
+  // $container.imagesLoaded( function() {
+    // $container.masonry();
+  // });
+});
+

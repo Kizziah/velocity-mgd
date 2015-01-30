@@ -20,4 +20,4 @@
 //= require app
 //= require action
 //= require mgdApp
-//= require myDraggable
+//= require jscroll
