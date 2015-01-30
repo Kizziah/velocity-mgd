@@ -3,6 +3,31 @@
     <div class="col-md-offset-2 col-md-8">
       <h4>Closure Angular Directive with Jasmine</h4>
       <p>setConditionSpec.js</p>
+      <%= raw Pygments.highlight("        describe('Directive: setCondition', function() {
+          var element,
+              $scope,
+              $compile;
+
+          function createElement(condition){
+            $scope.condition = condition;
+            $compile(element)($scope);
+            $scope.$digest();
+            return element;
+          }
+
+          beforeEach(module('setCondition'));  
+          beforeEach(inject(function($rootScope, $injector) {
+            $scope   = $rootScope.$new({});
+            $compile = $injector.get('$compile');
+            $scope.condition = {};
+            element = angular.element('div set-condition /div');
+          }));
+
+          it('sets condition to true', function() {
+            element = CreateElement(true);
+            expect(element.condition).toEqual(true);
+          });
+        });", lexer: 'javascript') %>
     </div>
   </div>
 
