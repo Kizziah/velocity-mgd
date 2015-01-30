@@ -1,7 +1,17 @@
 <section class="intro container">
 	<div ng-controller="actionCtrl"  class="home">
-
-  	<h1 class="text-center">Michael Gregory Davis</h1>
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8">
+	  		<h1 class="text-center brand">Angular & Rails Development</h1>
+	  		<h1 class="text-center">Michael Gregory Davis</h1>
+	  	</div>
+  	</div>
+		<div class="row text-center hero">
+			<div class="col-md-offset-2 col-md-8">
+				<h3>About Me</h3>
+				<p>I'm a software engineer living in Washington DC. I have experiecne web developing with HTML5, Ruby on Rails, and JavaScript. I have a focus on user-centered UX/UI for websites and mobile applications. I also have experience with educational software. I enjoy BDD developement. I unit test AngularJS with Jasmine, and can test API endpoints using Jasmine.</p>
+			</div>
+		</div>
 		<div class="row text-center action-row">
 			<div class="btn btn-success"  ng-click="animateCalloutDiv('swing')">
 					Swing
@@ -12,35 +22,25 @@
 				</div>	
 
 				<div class="btn btn-danger"  ng-click="animateCalloutDiv('pulse')">
-					Pulse
+					Expand
 				</div>
-		</div>
-		<div class="row text-center hero">
-			<h3>About Me</h3>
-			<p>I'm a software engineer living in Washington DC. I have experiecne web developing with HTML5, Ruby on Rails, and JavaScript. I have a focus on user-centered UX/UI for websites and mobile applications. I also have experience with educational software. I enjoy BDD developement. I unit test AngularJS with Jasmine, and can test API endpoints using Jasmine.</p>
-		</div>
+		</div>		
 		<div class="row">
-			<div class="col-md-offset-1 col-md-3">
-				<div class="row about">
-					<h3>Contact</h3>
-					<p></p>
-				</div>
-			</div>
-		 		<div class="col-md-3">
+		 		<div class="col-md-offset-4 col-md-3">
 					<div class="row about">
 						<h3>Blog</h3>
-						<a>Jasmine describes Closure</a>
+						<a href="/blogs">Jasmine describes Closure</a>
 						<i class="fa fa-cog fa-spin"></i>
 						<i class="fa fa-refresh fa-spin"></i>
 					</div>
 				</div>	 		
 				<div class="col-md-3">
-					<div class="row about">
-						<h3 ng-click="gotoProjects()">Projects</h3>				
-						<a>Educational Software</a>
+					<div class="row about page-scroll">					
+						<h3>Projects</h3>				
+						<a href="#pdr">Educational Software</a>
 						<i class="fa fa-refresh fa-spin"></i>
 						<br>
-						<a>Social Media Apps</a>
+						<a href="#zoomph">Social Media Apps</a>
 						<i class="fa fa-cog fa-spin"></i>
 					</div>
 				</div>
@@ -53,7 +53,7 @@
 	<div class="row">
 		<h2 class="text-center">Recent Projects, Software, and Collaborations</h2>
 	</div>		
-	<div class="col-md-offset-2 col-md-8">
+	<div class="col-md-offset-2 col-md-8" id="zoomph">
 		<div class="thumbnail">
 			<img id="pdr1" width="600px" src="assets/zoomph3.png">
 			<div class="caption text-center">
@@ -74,7 +74,7 @@
 			</div>			
 		</div>
 	</div>
-	<div class="col-md-offset-2 col-md-8">
+	<div class="col-md-offset-2 col-md-8" id="pdr">
 		<div class="thumbnail">
 			<img id="pdr1" width="600px" src="assets/pdr2.png">
 			<div class="caption text-center">

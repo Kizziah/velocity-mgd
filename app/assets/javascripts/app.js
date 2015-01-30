@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name awfulWordplayApp
- * @description
- * # awfulWordplayApp
- *
- * Main module of the application.
- */
 angular.module('myApp', []);
 
 angular.module('myApp').directive('swing', ['$compile',
@@ -132,16 +124,6 @@ angular.module('myApp').directive('moveRight', ['$compile',
      };
 }]);
 
-//jQuery to collapse the navbar on scroll
-// $(window).scroll(function() {
-//   if ($(".navbar").offset().top > 50) {
-//     $(".navbar-fixed-top").addClass("top-nav-collapse");
-//   } else {
-//     $(".navbar-fixed-top").removeClass("top-nav-collapse");
-//   }
-// });
-
-//jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
   $('.page-scroll a').bind('click', function(event) {
     var $anchor = $(this);
@@ -150,11 +132,5 @@ $(function() {
     }, 750, 'easeInOutExpo');
     event.preventDefault();
   });
-
-  // var $container = $('#container');
-  // initialize Masonry after all images have loaded  
-  // $container.imagesLoaded( function() {
-    // $container.masonry();
-  // });
 });
 
