@@ -1,8 +1,9 @@
 <div class="blog">
   <div class="row">
-    <div class="col-md-offset-2 col-md-8">
+    <div class="col-md-offset-2 col-md-7">
       <h4>Closure Angular Directive with Jasmine</h4>
       <p>setConditionSpec.js</p>
+      <p>In the following AngularJS example you can notice the variable element is created before anything. But keep in mind this element has the ability to be set and non-changable through closure.</p>
       <%= raw Pygments.highlight("        describe('Directive: setCondition', function() {
           var element,
               $scope,
@@ -27,48 +28,21 @@
             element = CreateElement(true);
             expect(element.condition).toEqual(true);
           });
+
+          it('sets condition to false', function() {
+            element = CreateElement(false);
+            expect(element.condition).toEqual(false);
+          });
+
         });", lexer: 'javascript') %>
     </div>
   </div>
 
+
   <div class="row">
-    <div class="col-md-offset-2 col-md-8">
-      <pre class="language-javascript">
-        describe('Directive: setCondition', function() {
-          var element,
-              $scope,
-              $compile;
-
-          function createElement(condition){
-            $scope.condition = condition;
-            $compile(element)($scope);
-            $scope.$digest();
-            return element;
-          }
-
-          beforeEach(module('setCondition'));  
-          beforeEach(inject(function($rootScope, $injector) {
-            $scope   = $rootScope.$new({});
-            $compile = $injector.get('$compile');
-            $scope.condition = {};
-            element = angular.element("div set-condition /div");
-          }));
-
-          it('sets condition to true', function() {
-            element = CreateElement(true);
-            expect(element.condition).toEqual(true);
-          });
-        });      
-      </pre>
-    </div>
-
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-md-offset-2 col-md-8">
+    <div class="col-md-offset-2 col-md-7">
     <p>setCondition.js</p>
-      <pre class="language-javascript">
-        app.directive('setCondition', ['$compile',
+      <%= raw Pygments.highlight("app.directive('setCondition', ['$compile',
             function($compile) {
               return {
                 restrict: 'A',
@@ -81,8 +55,7 @@
                 },
 
              };
-        }]);    
-      </pre>
+        }]);", lexer: 'javascript')%>    
     </div>
 
   </div>
