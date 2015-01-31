@@ -1,7 +1,7 @@
 angular.module("myApp").controller("actionCtrl", [
-  "$q", "$scope", function($q, $scope) {
+  "$q", "$scope", "$timeout", "$document", function($q, $scope, $timeout, $document) {
 
-		$(document).ready(function() {
+		$timeout(function() {
 			// $('.git').velocity({
 			//   rotateX: '360deg',
 			//   rotateY: '360deg'
@@ -13,8 +13,16 @@ angular.module("myApp").controller("actionCtrl", [
 			$('.action-row').velocity('transition.swoopIn', 1500);						
 		});
 
+			function swoop() {
+				alert("Hello");
+		 	// $('.action-row').velocity('transition.swoopIn', 1500);
+			};
+
+		$document.on('page:load', swoop());
+
     $scope.animateCalloutDiv = function(action) {
       $(".about").velocity("callout." + action);
     };    
   }
 ]);
+
