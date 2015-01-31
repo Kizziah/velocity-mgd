@@ -14,20 +14,20 @@ h1.brand	{
 }
 
 body {
- 	background: black;
+ 	// background: black;
 }
 
 section.intro {
-	margin-bottom: 430px;
+	background: black;
+	padding-bottom: 430px;
 	color: white;
+	width: 102%;
 }
 
-div#projects {
+section#projects {
 	background: black;
-	height: 100%;
 	width: 102%;
   color: #eee !important;
- 
   .btn-default {
 		border: 1px solid #28c3ab;
 		color: #28c3ab;
@@ -77,7 +77,7 @@ span.label-default {
 
 section#contact {
 	padding: 230px;
-	width: 100%;
+	width: 102%;
 	background-color: black;
 	a {
 		color: #28c3ab;

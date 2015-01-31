@@ -8,22 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="myApp">
-  <nav class=" navbar navbar-custom navbar-fixed-top">
-    <div class="navbar-header page-scroll">
-      <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <li class="hidden active">
-                <a href="#page-top"></a>
-                </li>
-                <li class="page-scroll">
-                <a href="#projects">Projects</a>
-                </li>
-                <li class="page-scroll">
-                <a href="#contact">Contact</a>
-                </li>
-      </ul>
-    </div>
-  </nav>
+
 		<%= yield %>
     
 	<section id="contact" class="container content-section text-center">
