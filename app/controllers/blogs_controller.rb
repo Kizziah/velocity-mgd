@@ -9,6 +9,9 @@ class BlogsController < ApplicationController
   
   def home   
   end
+
+  def countdown   
+  end
   # GET /blogs/1
   # GET /blogs/1.json
   def show
