@@ -12,6 +12,12 @@ angular.module("myApp").controller("actionCtrl", [
     
     $document.ready($scope.swoop);
     $document.on('page:load', $scope.swoop);
-
+    
   }
 ]);
+
+$(function() {
+  $( "li" ).each(function( index ) {
+    console.log( index + ": " + $( this ).text() );
+  });
+});

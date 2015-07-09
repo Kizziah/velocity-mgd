@@ -28,7 +28,7 @@ angular.module('myApp').directive('bounce', ['$compile',
         restrict: 'A',
         scope: {},
         link: function(scope, elm, attrs) {
-    
+          
           scope.bounce = function() {            
             $("div.bounce").velocity("callout.bounce");
           };
@@ -42,7 +42,7 @@ angular.module('myApp').directive('bounce', ['$compile',
 }]);
 
 $(function() {
-  $('.page-scroll a').bind('click', function(event) {
+  $('.page-scroll a').on('click', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
       scrollTop: $($anchor.attr('href')).offset().top
@@ -50,4 +50,3 @@ $(function() {
     event.preventDefault();
   });
 });
-
