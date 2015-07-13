@@ -1,3 +1,4 @@
+<div ng-controller="actionCtrl" 
 	<link href='http://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
 
 	<style type="text/css">
@@ -68,8 +69,8 @@
 		        <td align="center" ><div class="title" ></div></td>
 		    </tr>
 		</table>	
-	  	<img src="assets/map.png">
-	
+	  	<img ng-click="changeFlag()"  ng-src="{{ flag }}" >
+			<img/>
 	</center>
 
 <script type="text/javascript">
@@ -153,3 +154,4 @@ setTimeout("countdown(theyear,themonth,theday,thehour,theminute)",1000);
 countdown(year,month,day,hour,minute);
 
 </script>
+</div>
