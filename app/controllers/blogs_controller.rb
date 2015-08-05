@@ -9,6 +9,9 @@ class BlogsController < ApplicationController
   
   def home   
   end
+ 
+  def sockem    
+  end
 
   def countdown   
   end

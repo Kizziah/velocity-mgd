@@ -16,6 +16,12 @@ angular.module("myApp").controller("actionCtrl", [
         
         $scope.changeFlag();
       }, 1000);    
+
+
+    $scope.punch = function() {
+      // alert("Punch");
+    };
+
   }
 ]);
 

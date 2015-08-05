@@ -11,7 +11,6 @@ angular.module('myApp').directive('swing', ['$compile',
 
           scope.swing = function() {            
             $("div.about").velocity("callout.swing");
-
           };
 
           elm.removeAttr("swing"); // Prevents loop
@@ -40,6 +39,33 @@ angular.module('myApp').directive('bounce', ['$compile',
 
      };
 }]);
+
+angular.module('myApp').directive('boomerang', ['$compile',
+    function($compile) {
+      return {
+        restrict: 'A',
+        scope: {},
+        link: function(scope, elm, attrs) {
+       
+          scope.boomerang = function() {         
+            $('div.box').velocity({
+              rotateY: '360deg'
+            },{
+              duration:1500,
+              easing:'linear'
+            });
+            // $("div.box").velocity("transition.flipBounceYOut");
+
+          };
+
+          elm.removeAttr("boomerang"); // Prevents loop
+          elm.attr('ng-click', "boomerang()");
+          $compile(elm)(scope);
+        },
+
+     };
+}]);
+
 
 $(function() {
   $('.page-scroll a').on('click', function(event) {
